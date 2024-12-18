@@ -1,5 +1,5 @@
 // Path to your CSV file 
-const csvFilePath = "SeatingPlan1.csv"; // Ensure the correct path to your CSV file
+const csvFilePath = "SeatingPlan2.csv"; // Ensure the correct path to your CSV file
 
 let guests = []; // This will hold the parsed guest data
 
@@ -16,7 +16,7 @@ function loadCSV() {
       guests = results.data.map((guest) => ({
         name: guest.Nama ? guest.Nama.trim() : "Unknown",
         id: guest["No Tentera"] ? guest["No Tentera"].trim() : "Unknown",
-        rank: guest.PANGKAT ? guest.PANGKAT.trim() : "Unknown",
+        rank: guest.Pangkat ? guest.Pangkat.trim() : "Unknown",
         seat: guest.Meja ? guest.Meja.trim() : "Unknown",
       }));
       console.log("CSV Loaded:", guests); // Debug: Log loaded data
