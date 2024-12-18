@@ -1,0 +1,117 @@
+/* Bollywood Theme Styling */
+body {
+    background: linear-gradient(180deg, #800020, #2e0a3b); /* Maroon to deep purple */
+    color: #ffd700; /* Gold */
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  header img {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    border-radius: 15px;
+    border: 5px solid #ffd700;
+    box-shadow: 0 0 15px #ffd700, 0 0 30px #ff4500;
+  }
+  
+  h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 60px;
+    color: #ffd700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 20px;
+    color: #ffffff;
+    font-style: italic;
+    margin-bottom: 30px;
+  }
+  
+  .search-container input {
+    width: 80%;
+    max-width: 600px;
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #ffd700;
+    border-radius: 5px;
+    background-color: #3e1c47; /* Dark purple */
+    color: #fff;
+  }
+  
+  .search-container input::placeholder {
+    color: #d3a9d1; /* Light purple */
+  }
+  
+  .data-box {
+    background: rgba(255, 215, 0, 0.1); /* Translucent gold */
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+    margin-top: 20px;
+  }
+  
+  .guest-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .guest-table th, .guest-table td {
+    padding: 10px;
+    border: 1px solid #ffd700;
+    color: #ffd700;
+  }
+  
+  .guest-table th {
+    background: #571845; /* Deep purple */
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+  }
+  
+  .guest-table td {
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+  }
+  
+  .guest-table tr:hover {
+    background: rgba(255, 215, 0, 0.2); /* Highlight on hover */
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ffd700, #ff4500); /* Gold to orange gradient */
+    color: #3e1c47; /* Dark purple */
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.6);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn:hover {
+    background: linear-gradient(135deg, #ff4500, #ffd700); /* Reverse gradient */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 36px;
+    }
+    
+    .guest-table th, .guest-table td {
+      font-size: 14px;
+    }
+  }
+  
