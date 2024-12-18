@@ -5,33 +5,39 @@ body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     padding: 20px;
-  }
-  
-  header img {
+}
+
+header img {
     width: 100%;
     max-width: 800px;
     margin: 0 auto 20px;
     border-radius: 15px;
     border: 5px solid #ffd700;
-    box-shadow: 0 0 15px #ffd700, 0 0 30px #ff4500;
-  }
-  
-  h1 {
+    box-shadow: 0 0 15px #ffd700, 0 0 30px #ff4500, 0 0 50px #800020;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Add glowing effect on hover */
+header img:hover {
+    box-shadow: 0 0 25px #ffd700, 0 0 50px #ff4500, 0 0 70px #800020;
+}
+
+h1 {
     font-family: 'Cinzel Decorative', cursive;
     font-size: 60px;
     color: #ffd700;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
     margin-bottom: 10px;
-  }
-  
-  .description {
+}
+
+.description {
     font-size: 20px;
     color: #ffffff;
     font-style: italic;
     margin-bottom: 30px;
-  }
-  
-  .search-container input {
+}
+
+.search-container input {
     width: 80%;
     max-width: 600px;
     padding: 15px;
@@ -40,22 +46,22 @@ body {
     border-radius: 5px;
     background-color: #3e1c47; /* Dark purple */
     color: #fff;
-  }
-  
-  .search-container input::placeholder {
+}
+
+.search-container input::placeholder {
     color: #d3a9d1; /* Light purple */
-  }
-  
-  .data-box {
+}
+
+.data-box {
     background: rgba(255, 215, 0, 0.1); /* Translucent gold */
     border: 2px solid #ffd700;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
     margin-top: 20px;
-  }
-  
-  .guest-table {
+}
+
+.guest-table {
     width: 100%;
     max-width: 600px;
     margin: 20px auto;
@@ -64,30 +70,31 @@ body {
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
     border-radius: 10px;
     overflow: hidden;
-  }
-  
-  .guest-table th, .guest-table td {
+}
+
+.guest-table th,
+.guest-table td {
     padding: 10px;
     border: 1px solid #ffd700;
     color: #ffd700;
-  }
-  
-  .guest-table th {
+}
+
+.guest-table th {
     background: #571845; /* Deep purple */
     font-family: 'Cinzel', serif;
     font-size: 18px;
-  }
-  
-  .guest-table td {
+}
+
+.guest-table td {
     background: rgba(0, 0, 0, 0.5);
     font-size: 16px;
-  }
-  
-  .guest-table tr:hover {
+}
+
+.guest-table tr:hover {
     background: rgba(255, 215, 0, 0.2); /* Highlight on hover */
-  }
-  
-  .btn {
+}
+
+.btn {
     padding: 10px 20px;
     background: linear-gradient(135deg, #ffd700, #ff4500); /* Gold to orange gradient */
     color: #3e1c47; /* Dark purple */
@@ -97,21 +104,61 @@ body {
     cursor: pointer;
     box-shadow: 0 0 15px rgba(255, 69, 0, 0.6);
     transition: all 0.3s ease-in-out;
-  }
-  
-  .btn:hover {
+}
+
+.btn:hover {
     background: linear-gradient(135deg, #ff4500, #ffd700); /* Reverse gradient */
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
-  }
-  
-  /* Responsive Adjustments */
-  @media screen and (max-width: 768px) {
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    img, .glowing-border {
+        width: 100%;         /* Full width on mobile */
+        max-width: 100%;     /* Prevent overflow */
+        height: auto;        /* Keep aspect ratio */
+        border-radius: 10px; /* Rounded corners */
+        margin-bottom: 20px;
+      }
     h1 {
-      font-size: 36px;
+        font-size: 36px;
     }
-    
-    .guest-table th, .guest-table td {
-      font-size: 14px;
+
+    header img {
+        width: 100%; /* Ensure full-width on mobile */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Slightly rounded corners */
+        box-shadow: 0 0 15px #ffd700, 0 0 30px #ff4500; /* Adjust shadow for smaller screens */
+    }
+
+    .guest-table th,
+    .guest-table td {
+        font-size: 14px;
+    }
+}
+
+/* Mobile-Specific Header & Description Adjustments */
+@media screen and (max-width: 768px) {
+    h1 {
+      font-size: 36px;   /* Slightly smaller header */
+      margin-bottom: 15px;
+    }
+  
+    h2 {
+      font-size: 28px;   /* Subheader size */
+      margin: 30px 0 15px;
+    }
+  
+    .description {
+      font-size: 16px;   /* Smaller but readable text */
+      line-height: 1.6;  /* Better spacing */
+      margin-bottom: 30px;
+    }
+  
+    header img {
+      width: 100%;       /* Full width */
+      height: auto;      /* Keep aspect ratio */
+      border-radius: 0;  /* Remove rounded corners */
+      margin-bottom: 20px;
     }
   }
-  
